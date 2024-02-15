@@ -1,11 +1,15 @@
 package spring.core.member;
 
-import org.springframework.stereotype.Component;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+
+@Repository
+@Primary
 public class MemoryMemberRepository implements MemberRepository {
 
     private static final Map<Long, Member> store = new HashMap<>();
