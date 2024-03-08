@@ -11,6 +11,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
+    // 주문
     public void order(Long memberId, String itemName, int itemPrice) {
         orderService.createOrder(memberId, itemName, itemPrice);
     }
